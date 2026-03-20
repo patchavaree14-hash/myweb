@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Guide</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+    }
+
+    /* Navbar */
+    nav {
+      background: #3e2723;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav h1 {
+      font-size: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://source.unsplash.com/1600x900/?cafe,coffee');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #ffcc80;
+      color: #3e2723;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffa726;
+    }
+
+    /* Section */
+    .section {
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: left;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Footer */
+    footer {
+      background: #3e2723;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h1>☕ Cafe Guide</h1>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Cafe</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h2>ค้นหาคาเฟ่สวยๆ</h2>
+  <p>รวมคาเฟ่น่านั่งในปทุมธานี</p>
+  <button class="btn" onclick="scrollToCafe()">ดูคาเฟ่</button>
+</section>
+
+<!-- Cafe Section -->
+<section class="section" id="cafe">
+  <h2>✨ คาเฟ่แนะนำ</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?cafe">
+      <div class="card-content">
+        <h3>Somewhere Cafe</h3>
+        <p>คาเฟ่มินิมอล บรรยากาศสงบ เหมาะนั่งชิล</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?coffee-shop">
+      <div class="card-content">
+        <h3>Tree & Time</h3>
+        <p>คาเฟ่ธรรมชาติ ต้นไม้เยอะ ฟีลดีมาก</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?latte">
+      <div class="card-content">
+        <h3>Brown Coffee</h3>
+        <p>กาแฟเข้ม มุมถ่ายรูปเยอะ</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?dessert">
+      <div class="card-content">
+        <h3>Sweet Garden</h3>
+        <p>สายหวานต้องมา เค้กอร่อยมาก</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Cafe Guide | Pathumthani</p>
+</footer>
+
+<script>
+function scrollToCafe() {
+  document.getElementById("cafe").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+</html>
